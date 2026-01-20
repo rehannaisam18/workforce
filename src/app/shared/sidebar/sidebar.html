@@ -1,0 +1,28 @@
+<div style="width:200px; background:#eee; padding:10px; height:100vh">
+
+  <!-- ADMIN -->
+  <div *ngIf="role === 'Admin'">
+    <a routerLink="/admin">Admin Dashboard</a><br><br>
+    <a routerLink="/admin/create-user">Create User</a>
+  </div>
+
+  <!-- MANAGER -->
+  <div *ngIf="role === 'Manager'">
+    <a routerLink="/manager">Manager Dashboard</a><br><br>
+    <a routerLink="/manager/shifts">Shift Planning</a><br><br>
+    <a routerLink="/manager/approvals">Approvals</a>
+  </div>
+
+  <!-- EMPLOYEE -->
+  <div *ngIf="role === 'Employee'">
+    <a routerLink="/employee">Employee Dashboard</a><br><br>
+    <a routerLink="/employee/profile" >Profile</a><br><br>
+    <a routerLink="/employee/availability">Availability</a>
+  </div>
+
+  <br><br>
+  <button (click)="logout()">Logout</button>
+
+</div>
+
+
